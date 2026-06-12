@@ -1,52 +1,52 @@
 import { useNavigate } from "react-router-dom";
+import { useCallback, useMemo } from "react";
 
 function Perfil() {
   const navigate = useNavigate();
 
-  const cerrarSesion = () => {
+  const mensajeBienvenida = useMemo(() => {
+    return "Bienvenido a la sección protegida";
+  }, []);
+
+  const cerrarSesion = useCallback(() => {
     localStorage.removeItem("token");
     navigate("/login");
-  };
+  }, [navigate]);
 
-const obtenerDatos = async () => {
-  try {
-    const token = localStorage.getItem("token");
+  const obtenerDatos = useCallback(async () => {
+    try {
+      const token = localStorage.getItem("token");
 
-    const respuesta = await fetch(
-      "http://localhost:5000/perfil",
-      {
-        headers: {
-          Authorization: token,
-        },
+      const respuesta = await fetch(
+        "http://localhost:5000/perfil",
+        {
+          headers: {
+            Authorization: token,
+          },
+        }
+      );
+
+      if (!respuesta.ok) {
+        throw new Error("No se pudo acceder al recurso");
       }
-    );
 
-    if (!respuesta.ok) {
-      throw new Error("No se pudo acceder al recurso");
+      const datos = await respuesta.json();
+
+      alert(datos.mensaje);
+    } catch (error) {
+      alert(error.message);
     }
-
-    const datos = await respuesta.json();
-
-    alert(datos.mensaje);
-  } catch (error) {
-    alert(error.message);
-  }
-};
+  }, []);
 
   return (
     <div>
       <h1>Perfil del Usuario</h1>
 
-      <p>
-        Esta es una ruta protegida.
-      </p>
+      <p>{mensajeBienvenida}</p>
 
       <button onClick={obtenerDatos}>
         Obtener Datos Protegidos
       </button>
-
-      <br />
-      <br />
 
       <button onClick={cerrarSesion}>
         Cerrar Sesión
