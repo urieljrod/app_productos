@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Login from "./pages/Login";
-import Perfil from "./pages/Perfil";
-import Productos from "./pages/Productos";
-import AgregarProducto from "./pages/AgregarProducto";
+import Login from "./Login";
+import Perfil from "./Perfil";
+import Productos from "./Productos";
+import AgregarProducto from "./AgregarProducto";
 
-import ProtectedRoute from "./components/ProtectedRoute";
+import ProtectedRoute from "./ProtectedRoute";
 
 function App() {
   return (
