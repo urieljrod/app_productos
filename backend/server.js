@@ -1,5 +1,8 @@
 require("dotenv").config();
 
+const productosRoutes =
+  require("./routes/productos");
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -8,6 +11,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use("/productos", productosRoutes);
 
 // Conexión a MongoDB
 mongoose

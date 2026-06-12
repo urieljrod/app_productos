@@ -19,16 +19,16 @@
 - [x] Tarea 3 - Creación de los prototipos de diseño de la interfaz.
 
 ### 🛠️ Sprint 1 *(27 mayo)*
-- [ ] Tarea 1 (Sprint backlog) - Planificación del desarrollo de la interfaz base.
-- [ ] Tarea 2 - Maquetación del catálogo en HTML y CSS.
-- [ ] Tarea 3 - Creación del archivo de datos con el listado y detalle de los productos.
+- [x] Tarea 1 (Sprint backlog) - Planificación del desarrollo de la interfaz base.
+- [x] Tarea 2 - Maquetación del catálogo en HTML y CSS.
+- [x] Tarea 3 - Creación del archivo de datos con el listado y detalle de los productos.
 
 ### 🧪 Sprint 2 *(8 junio)*
-- [ ] Tarea 1 (Sprint backlog) - Planificación de la interactividad y pruebas finales.
-- [ ] Tarea 2 - Implementación del buscador dinámico y los filtros de categorías con JavaScript.
-- [ ] Tarea 3 - Integración del carrito de compras y despliegue del proyecto.
+- [x] Tarea 1 (Sprint backlog) - Planificación de la interactividad y pruebas finales.
+- [x] Tarea 2 - Implementación del buscador dinámico y los filtros de categorías con JavaScript.
+- [x] Tarea 3 - Integración del carrito de compras y despliegue del proyecto.
 
 ---
 
 ## 🏁 Aplicación terminada *(10 junio)*
-- [ ] Control de calidad final, revisión de enlaces rotos y entrega del proyecto 🚀
+- [x] Control de calidad final, revisión de enlaces rotos y entrega del proyecto 🚀
