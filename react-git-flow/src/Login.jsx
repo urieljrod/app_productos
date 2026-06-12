@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { loginSchema } from "../schemas/loginSchema";
+import { loginSchema } from "./schemas/loginSchema";
 
 function Login() {
   const navigate = useNavigate();
