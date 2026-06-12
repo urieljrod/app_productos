@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Login from "./Login";
 import Perfil from "./Perfil";
@@ -12,10 +12,10 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-        {/* Ruta pública */}
+        <Route path="/" element={<Navigate to="/login" />} />
+
         <Route path="/login" element={<Login />} />
 
-        {/* Perfil protegido */}
         <Route
           path="/perfil"
           element={
@@ -25,7 +25,6 @@ function App() {
           }
         />
 
-        {/* Lista de productos */}
         <Route
           path="/productos"
           element={
@@ -35,7 +34,6 @@ function App() {
           }
         />
 
-        {/* Agregar producto */}
         <Route
           path="/agregar-producto"
           element={
