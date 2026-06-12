@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { productoSchema } from "../schemas/productoSchema";
+import { productoSchema } from "./schemas/productoSchema";
 
 function AgregarProducto() {
   const [errores, setErrores] = useState({});
