@@ -8,28 +8,30 @@ function Perfil() {
     navigate("/login");
   };
 
-  const obtenerDatos = async () => {
-    try {
-      const token = localStorage.getItem("token");
+const obtenerDatos = async () => {
+  try {
+    const token = localStorage.getItem("token");
 
-      const respuesta = await fetch(
-        "http://localhost:5000/perfil",
-        {
-          headers: {
-            Authorization: token,
-          },
-        }
-      );
+    const respuesta = await fetch(
+      "http://localhost:5000/perfil",
+      {
+        headers: {
+          Authorization: token,
+        },
+      }
+    );
 
-      const datos = await respuesta.json();
-
-      console.log(datos);
-      alert(datos.mensaje);
-    } catch (error) {
-      console.error("Error:", error);
-      alert("Error al obtener los datos");
+    if (!respuesta.ok) {
+      throw new Error("No se pudo acceder al recurso");
     }
-  };
+
+    const datos = await respuesta.json();
+
+    alert(datos.mensaje);
+  } catch (error) {
+    alert(error.message);
+  }
+};
 
   return (
     <div>
